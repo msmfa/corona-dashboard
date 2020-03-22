@@ -52,7 +52,7 @@ class App extends Component {
             <h3 className="subtitle">deaths:</h3>{" "}
             <h3 className="numbers">{this.state.deaths}</h3>
           </h2>
-          <div className="flexbox-circle">
+          {/* <div className="flexbox-circle">
             <div className="circle-green"></div>
             <h3>Confirmed</h3>
           </div>
