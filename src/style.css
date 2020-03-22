@@ -31,7 +31,7 @@ body {
 
 .display-left {
   width: 35vw;
-  border-right: 1px solid green;
+  border-right: 1px solid rgb(186, 187, 186);
   height: 100vh;
 }
 
@@ -58,7 +58,9 @@ body {
   color: grey;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.05em;
+  font-weight: 200;
 }
 .bold {
-  color: rgb(10, 218, 44);
+  font-weight: bold;
+  color: rgb(121, 120, 120);
 }
