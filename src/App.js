@@ -25,25 +25,69 @@ class App extends Component {
         <h2>confirmed: {this.state.confirmed}</h2>
         <h2>recovered: {this.state.recovered}</h2>
         <h2>deaths: {this.state.deaths}</h2>
-
-        <Display />
+        <DisplayDeaths
+          deaths={this.state.deaths}
+          recovered={this.state.recovered}
+          confirmed={this.state.confirmed}
+        />
       </div>
     );
   }
 }
 
-class Display extends Component {
-  createTable = () => {
+class DisplayDeaths extends Component {
+  createDeathNumber = () => {
+    const numDeaths = this.props.deaths;
+    return Math.sqrt(numDeaths);
+  };
+  createRecoverNumber = () => {
+    const numRec = this.props.recovered;
+    return Math.sqrt(numRec);
+  };
+  createConfirmedNumber = () => {
+    const numRec = this.props.confirmed;
+    return Math.sqrt(numRec);
+  };
+
+  createTableDeaths = () => {
     let div = [];
 
-    for (let i = 0; i < 28; i++) {
+    for (let i = 0; i < this.createDeathNumber(); i++) {
       let children = [];
 
-      for (let j = 0; j < 28; j++) {
-        children.push(<div className="box"></div>);
+      for (let j = 0; j < this.createDeathNumber(); j++) {
+        children.push(<div className="box-deaths"></div>);
       }
 
-      div.push(<div className="box">{children}</div>);
+      div.push(<div className="box-deaths">{children}</div>);
+    }
+    return div;
+  };
+  createTableRecovered = () => {
+    let div = [];
+
+    for (let i = 0; i < this.createRecoverNumber(); i++) {
+      let children = [];
+
+      for (let j = 0; j < this.createRecoverNumber(); j++) {
+        children.push(<div className="box-second"></div>);
+      }
+
+      div.push(<div className="box-second">{children}</div>);
+    }
+    return div;
+  };
+  createTableConfirmed = () => {
+    let div = [];
+
+    for (let i = 0; i < this.createConfirmedNumber(); i++) {
+      let children = [];
+
+      for (let j = 0; j < this.createConfirmedNumber(); j++) {
+        children.push(<div className="box-confirmed"></div>);
+      }
+
+      div.push(<div className="box-confirmed">{children}</div>);
     }
     return div;
   };
@@ -51,7 +95,14 @@ class Display extends Component {
   render() {
     return (
       <div>
-        <div className="box-container">{this.createTable()}</div>
+        <div className="box-container-deaths">{this.createTableDeaths()}</div>
+        <div className="box-container-second">
+          {this.createTableRecovered()}
+        </div>
+        <div className="box-container-confirmed">
+          {this.createTableConfirmed()}
+        </div>
+        <div></div>
       </div>
     );
   }

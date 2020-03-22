@@ -1,11 +1,40 @@
-.box {
-  width: 10px;
-  height: 10px;
-  border: solid 1px rgb(219, 219, 219);
+.box-deaths {
+  width: 1px;
+  height: 1px;
+
+  background-color: red;
 }
 
-.box-container {
+.box-container-deaths {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  float: right;
+}
+.box-container-second {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  float: right;
+}
+
+.box-second {
+  width: 1px;
+  height: 1px;
+
+  background-color: green;
+}
+
+.box-confirmed {
+  width: 1px;
+  height: 1px;
+
+  background-color: rgb(214, 127, 55);
+}
+
+.box-container-confirmed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  float: right;
 }
