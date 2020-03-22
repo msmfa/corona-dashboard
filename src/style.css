@@ -21,12 +21,14 @@ body {
 .container-icons {
   padding: 1em;
   display: flex;
+  flex-wrap: wrap;
   width: 100vw;
   height: 50vh;
 }
 
 .main-container {
   display: flex;
+  height: 90vh;
   padding: 1em;
 }
 
@@ -95,4 +97,13 @@ body {
 
 .flexbox-circle h3 {
   padding: 0.5em;
+}
+
+.credit {
+  margin-top: 19vh;
+  text-align: right;
+  padding: 0 0.7em;
+  font-size: 0.7em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }

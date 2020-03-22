@@ -52,14 +52,7 @@ class App extends Component {
             <h3 className="subtitle">deaths:</h3>{" "}
             <h3 className="numbers">{this.state.deaths}</h3>
           </h2>
-          {/* <div className="flexbox-circle">
-            <div className="circle-green"></div>
-            <h3>Confirmed</h3>
-          </div>
-          {/* <div className="circle-yellow"></div>
-          <h3> Recovered</h3>
-          <div className="circle-red"></div>
-          <h3> Deaths</h3> */}
+          <h4 className="credit">Data API provided by Mathdroid.</h4>
         </div>
         <DisplayDeaths
           deaths={this.state.deaths}
