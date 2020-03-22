@@ -40,6 +40,7 @@ class App extends Component {
                 is updated automatically.
               </div>
             </p>
+
             <h3 className="subtitle">confirmed: </h3>
             <h3 className="numbers">{this.state.confirmed}</h3>
           </h2>
@@ -51,6 +52,14 @@ class App extends Component {
             <h3 className="subtitle">deaths:</h3>{" "}
             <h3 className="numbers">{this.state.deaths}</h3>
           </h2>
+          <div className="flexbox-circle">
+            <div className="circle-green"></div>
+            <h3>Confirmed</h3>
+          </div>
+          {/* <div className="circle-yellow"></div>
+          <h3> Recovered</h3>
+          <div className="circle-red"></div>
+          <h3> Deaths</h3> */}
         </div>
         <DisplayDeaths
           deaths={this.state.deaths}
@@ -83,9 +92,7 @@ class DisplayDeaths extends Component {
       let children = [];
 
       for (let j = 0; j < this.createDeathNumber(); j++) {
-        children.push(
-          <img className="deathIcon" src={LogoSickTwo} alt="human" />
-        );
+        children.push(<img className="deathIcon" src={LogoSick} alt="human" />);
       }
 
       div.push(<div className="box-deaths">{children}</div>);
@@ -99,7 +106,9 @@ class DisplayDeaths extends Component {
       let children = [];
 
       for (let j = 0; j < this.createRecoverNumber(); j++) {
-        children.push(<img className="recIcon" src={LogoSick} alt="human" />);
+        children.push(
+          <img className="recIcon" src={LogoSickTwo} alt="human" />
+        );
       }
 
       div.push(<div className="box-second">{children}</div>);

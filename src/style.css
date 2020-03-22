@@ -74,6 +74,25 @@ body {
 }
 
 .numbers {
-  font-size: 3em;
+  font-size: 2em;
   color: rgb(221, 121, 39);
+}
+
+.circle-green {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+
+  border: 1.5px solid rgb(255, 136, 0);
+  background-color: rgb(255, 168, 68);
+  display: flex;
+  justify-content: right;
+}
+.flexbox-circle {
+  display: flex;
+  align-items: center;
+}
+
+.flexbox-circle h3 {
+  padding: 0.5em;
 }
