@@ -1,40 +1,21 @@
-.box-deaths {
-  width: 1px;
-  height: 1px;
-
-  background-color: red;
+* {
+  margin: 0.3em;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1em;
 }
 
-.box-container-deaths {
+.container-icons,
+.deathIcon,
+.recIcon,
+.confIcon {
+  width: 1em;
+  height: 1em;
+}
+
+.container-icons {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  float: right;
-}
-.box-container-second {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  float: right;
-}
-
-.box-second {
-  width: 1px;
-  height: 1px;
-
-  background-color: green;
-}
-
-.box-confirmed {
-  width: 1px;
-  height: 1px;
-
-  background-color: rgb(214, 127, 55);
-}
-
-.box-container-confirmed {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  float: right;
+  width: 100vw;
+  height: 50vh;
+  border: 1px solid red;
 }

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import LogoSick from "./IMG/human-sick.PNG";
+import LogoSickTwo from "./IMG/human-icon-sick2.png";
+import LogoHealthy from "./IMG/human-icon-healthy.png";
 
 class App extends Component {
   state = {
@@ -37,26 +40,28 @@ class App extends Component {
 
 class DisplayDeaths extends Component {
   createDeathNumber = () => {
-    const numDeaths = this.props.deaths;
+    const numDeaths = this.props.deaths / 5000;
     return Math.sqrt(numDeaths);
   };
   createRecoverNumber = () => {
-    const numRec = this.props.recovered;
+    const numRec = this.props.recovered / 5000;
     return Math.sqrt(numRec);
   };
   createConfirmedNumber = () => {
-    const numRec = this.props.confirmed;
+    const numRec = this.props.confirmed / 5000;
     return Math.sqrt(numRec);
   };
 
   createTableDeaths = () => {
     let div = [];
 
-    for (let i = 0; i < this.createDeathNumber(); i++) {
+    for (let i = 0; i < 2; i++) {
       let children = [];
 
-      for (let j = 0; j < this.createDeathNumber(); j++) {
-        children.push(<div className="box-deaths"></div>);
+      for (let j = 0; j < 2; j++) {
+        children.push(
+          <img className="deathIcon" src={LogoSickTwo} alt="human" />
+        );
       }
 
       div.push(<div className="box-deaths">{children}</div>);
@@ -66,11 +71,11 @@ class DisplayDeaths extends Component {
   createTableRecovered = () => {
     let div = [];
 
-    for (let i = 0; i < this.createRecoverNumber(); i++) {
+    for (let i = 0; i < 6; i++) {
       let children = [];
 
-      for (let j = 0; j < this.createRecoverNumber(); j++) {
-        children.push(<div className="box-second"></div>);
+      for (let j = 0; j < 6; j++) {
+        children.push(<img className="recIcon" src={LogoSick} alt="human" />);
       }
 
       div.push(<div className="box-second">{children}</div>);
@@ -80,11 +85,13 @@ class DisplayDeaths extends Component {
   createTableConfirmed = () => {
     let div = [];
 
-    for (let i = 0; i < this.createConfirmedNumber(); i++) {
+    for (let i = 0; i < 2; i++) {
       let children = [];
 
-      for (let j = 0; j < this.createConfirmedNumber(); j++) {
-        children.push(<div className="box-confirmed"></div>);
+      for (let j = 0; j < 2; j++) {
+        children.push(
+          <img className="recIcon" src={LogoHealthy} alt="human" />
+        );
       }
 
       div.push(<div className="box-confirmed">{children}</div>);
@@ -94,30 +101,14 @@ class DisplayDeaths extends Component {
 
   render() {
     return (
-      <div>
-        <div className="box-container-deaths">{this.createTableDeaths()}</div>
-        <div className="box-container-second">
-          {this.createTableRecovered()}
-        </div>
-        <div className="box-container-confirmed">
-          {this.createTableConfirmed()}
-        </div>
+      <div className="container-icons">
+        <div>{this.createTableDeaths()}</div>
+        <div>{this.createTableRecovered()}</div>
+        <div>{this.createTableConfirmed()}</div>
         <div></div>
       </div>
     );
   }
 }
-
-// function createDivs() {
-//   for (let i = 0; i < 17 * 17; i++) {
-//     const content = document.createElement("div");
-//     content.classList.add("content");
-//     container.appendChild(content);
-//     const box = document.querySelectorAll("div.content");
-//     box.forEach(box => {
-//       box.addEventListener("mouseover", changeColour);
-//     });
-//   }
-// }
 
 export default App;
