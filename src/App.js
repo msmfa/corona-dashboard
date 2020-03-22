@@ -23,11 +23,20 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Corono Dashboard</h1>
-        <h2>confirmed: {this.state.confirmed}</h2>
-        <h2>recovered: {this.state.recovered}</h2>
-        <h2>deaths: {this.state.deaths}</h2>
+      <div className="main-container">
+        <div className="display-left">
+          <h2>
+            <h3 className="subtitle">confirmed: </h3>
+            {this.state.confirmed}
+          </h2>
+          <h2>
+            <h3 className="subtitle">recovered: </h3>
+            {this.state.recovered}
+          </h2>
+          <h2>
+            <h3 className="subtitle">deaths:</h3> {this.state.deaths}
+          </h2>
+        </div>
         <DisplayDeaths
           deaths={this.state.deaths}
           recovered={this.state.recovered}
@@ -40,25 +49,25 @@ class App extends Component {
 
 class DisplayDeaths extends Component {
   createDeathNumber = () => {
-    const numDeaths = this.props.deaths / 5000;
-    return Math.sqrt(numDeaths);
+    const numDeaths = this.props.deaths / 1000;
+    return Number(Math.sqrt(numDeaths));
   };
   createRecoverNumber = () => {
-    const numRec = this.props.recovered / 5000;
-    return Math.sqrt(numRec);
+    const numRec = this.props.recovered / 1000;
+    return Number(Math.sqrt(numRec));
   };
   createConfirmedNumber = () => {
-    const numRec = this.props.confirmed / 5000;
-    return Math.sqrt(numRec);
+    const numRec = this.props.confirmed / 1000;
+    return Number(Math.sqrt(numRec));
   };
 
   createTableDeaths = () => {
     let div = [];
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < this.createDeathNumber(); i++) {
       let children = [];
 
-      for (let j = 0; j < 2; j++) {
+      for (let j = 0; j < this.createDeathNumber(); j++) {
         children.push(
           <img className="deathIcon" src={LogoSickTwo} alt="human" />
         );
@@ -71,10 +80,10 @@ class DisplayDeaths extends Component {
   createTableRecovered = () => {
     let div = [];
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < this.createRecoverNumber(); i++) {
       let children = [];
 
-      for (let j = 0; j < 6; j++) {
+      for (let j = 0; j < this.createRecoverNumber(); j++) {
         children.push(<img className="recIcon" src={LogoSick} alt="human" />);
       }
 
@@ -85,10 +94,10 @@ class DisplayDeaths extends Component {
   createTableConfirmed = () => {
     let div = [];
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < this.createConfirmedNumber(); i++) {
       let children = [];
 
-      for (let j = 0; j < 2; j++) {
+      for (let j = 0; j < this.createConfirmedNumber(); j++) {
         children.push(
           <img className="recIcon" src={LogoHealthy} alt="human" />
         );
