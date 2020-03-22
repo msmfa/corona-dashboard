@@ -25,7 +25,21 @@ class App extends Component {
     return (
       <div className="main-container">
         <div className="display-left">
+          <h1 className="title">Visualising COVID-19</h1>
           <h2>
+            <p className="display-left-text">
+              The first case of the new Coronavirus COVID-19 was recorded on 31
+              December in Wuhan, China (WHO). Since then {this.state.confirmed}{" "}
+              confirmed cases have been recorded worldwide.{" "}
+            </p>
+            <p className="display-left-text">
+              This Website helps to visualise COVID-19s spread and it's impact
+              on humanity.{" "}
+              <span className="bold">
+                Each person displayed on the right represents 1,000 people. It
+                is updated automatically.
+              </span>
+            </p>
             <h3 className="subtitle">confirmed: </h3>
             {this.state.confirmed}
           </h2>

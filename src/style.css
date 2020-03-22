@@ -30,12 +30,35 @@ body {
 }
 
 .display-left {
-  padding: 1em;
-  width: 25vw;
+  width: 35vw;
   border-right: 1px solid green;
   height: 100vh;
 }
 
 .subtitle {
   color: grey;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  border-bottom: orange 1px solid;
+  width: 100%;
+  height: 9vh;
+  font-size: 1.5em;
+  color: rgb(85, 85, 85);
+  margin-bottom: 1em;
+}
+
+.display-left-text {
+  padding: 0 1em;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+  color: grey;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+}
+.bold {
+  color: rgb(10, 218, 44);
 }
