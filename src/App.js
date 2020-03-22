@@ -35,20 +35,21 @@ class App extends Component {
             <p className="display-left-text">
               This Website helps to visualise COVID-19s spread and it's impact
               on humanity.{" "}
-              <span className="bold">
+              <div className="bold">
                 Each person displayed on the right represents 1,000 people. It
                 is updated automatically.
-              </span>
+              </div>
             </p>
             <h3 className="subtitle">confirmed: </h3>
-            {this.state.confirmed}
+            <h3 className="numbers">{this.state.confirmed}</h3>
           </h2>
           <h2>
             <h3 className="subtitle">recovered: </h3>
-            {this.state.recovered}
+            <h3 className="numbers">{this.state.recovered}</h3>
           </h2>
           <h2>
-            <h3 className="subtitle">deaths:</h3> {this.state.deaths}
+            <h3 className="subtitle">deaths:</h3>{" "}
+            <h3 className="numbers">{this.state.deaths}</h3>
           </h2>
         </div>
         <DisplayDeaths
