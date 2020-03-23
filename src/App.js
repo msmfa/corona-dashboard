@@ -112,7 +112,7 @@ class DisplayText extends Component {
           >
             WHO
           </a>{" "}
-          and is updated every minute
+          and is automatically updated.
         </p>
         <Footer />
         <div className="grey-line"></div>
