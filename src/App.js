@@ -3,7 +3,7 @@ import Axios from "axios";
 import LogoSick from "./IMG/human-sick.PNG";
 import LogoSickTwo from "./IMG/human-icon-sick2.png";
 import LogoHealthy from "./IMG/human-icon-healthy.png";
-import LogoGrey from "./IMG/human-icon-grey.png";
+import LogoGrey from "./IMG/defaulthuman.png";
 class App extends Component {
   state = {
     confirmed: 0
@@ -26,28 +26,62 @@ class App extends Component {
       <div className="main-container">
         <div className="display-left">
           <h1 className="title">Visualising COVID-19</h1>
-          <p className="display-left-text">
-            The first case of the new Coronavirus COVID-19 was recorded on 31
-            December in Wuhan, China (WHO). Since then {this.state.confirmed}{" "}
-            confirmed cases have been recorded worldwide.{" "}
+          <div className="numbers-container">
+            <h3 className="numbers">{this.state.confirmed}</h3>
+            <h3 className="numbers">{this.state.recovered}</h3>
+            <h3 className="numbers">{this.state.deaths}</h3>
+            <h3 className="subtitle">confirmed </h3>
+            <h3 className="subtitle">recovered </h3>
+            <h3 className="subtitle">deaths</h3>
+          </div>
+          <div className="grey-line"></div>
+          <p>
+            This Website helps to visualise the impact of COVID-19 and it's
+            spread.
           </p>
+          <div className="image-container">
+            <img className="image-amount" src={LogoGrey} alt="human"></img>
+            <p className="image-text"> = 1000 People</p>
+          </div>
+          <p>
+            The vast numbers infected can make it hard to visualise the
+            relationship between those infected, those who recover and those who
+            die from the virus. This website is an attempt to solve that
+            problem.
+          </p>
+          <p className="text-lower">
+            The data displayed is from the{" "}
+            <a
+              className="who-link"
+              href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WHO
+            </a>{" "}
+            and is updated every minute
+          </p>
+          <div className="grey-line"></div>
           <p className="display-left-text">
-            This Website helps to visualise COVID-19s spread and it's impact on
-            humanity.
-            <div className="image-container">
-              <img className="recIcon" src={LogoGrey} alt="human"></img>
-              <p> = 1000 People</p>
+            <div className="image-container-main">
+              <div className="image-container">
+                <img className="recIcon" src={LogoSickTwo} alt="human"></img>
+                <p> = Confirmed Cases</p>
+              </div>
+              <div className="image-container">
+                <img className="recIcon" src={LogoHealthy} alt="human"></img>
+                <p> = Recovered</p>
+              </div>
+              <div className="image-container">
+                <img className="recIcon" src={LogoSick} alt="human"></img>
+                <p> = Deaths</p>
+              </div>
             </div>
           </p>
-          <h3 className="subtitle">confirmed: </h3>
-          <h3 className="numbers">{this.state.confirmed}</h3>
-          <h3 className="subtitle">recovered: </h3>
-          <h3 className="numbers">{this.state.recovered}</h3>
-          <h3 className="subtitle">deaths:</h3>{" "}
-          <h3 className="numbers">{this.state.deaths}</h3>
           <div className="credit">
             Data API provided by{" "}
             <a
+              className="link"
               href="https://github.com/mathdroid"
               target="_blank"
               rel="noopener noreferrer"

@@ -47,16 +47,15 @@ body {
   height: 9vh;
   font-size: 1.2em;
   color: rgb(85, 85, 85);
-  margin-bottom: 1em;
+  padding-left: 0.4em;
 }
 
 .display-left {
   display: flex;
   flex-direction: column;
-  width: 35vw;
+  width: 45vw;
   border-right: 1px solid rgb(186, 187, 186);
   height: 100vh;
-  padding: 0.3em 1em;
 }
 .display-left-text {
   margin-bottom: 1em;
@@ -73,17 +72,17 @@ body {
 }
 
 .subtitle {
-  padding-top: 0.5em;
   color: rgb(92, 92, 92);
   text-transform: capitalize;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 0.7em;
+  margin-bottom: 1.4em;
 }
 
 .numbers {
-  font-size: 2em;
-  color: rgb(221, 121, 39);
+  font-size: 1.5em;
+  color: rgb(77, 77, 77);
 }
 
 .credit {
@@ -95,7 +94,49 @@ body {
 
 .image-container {
   display: flex;
-  align-items: center;
-  margin: 1em 0;
-  font-size: 1.5em;
+  margin: 0.8em 0 0 0.3em;
+  font-size: 1em;
+  color: rgb(148, 148, 148);
+  font-weight: 300;
+}
+
+.image-amount {
+  width: 40px;
+  font-family: "Roboto", sans-serif;
+}
+.image-text {
+  font-family: "Roboto", sans-serif;
+  color: rgb(56, 56, 56);
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(17, 72, 82);
+}
+
+.numbers-container {
+  text-align: center;
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grey-line {
+  width: 100%;
+  border: 1.1px solid rgb(230, 230, 230);
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  margin: 1em 0.5em 0 0.5em;
+  color: rgb(94, 94, 94);
+  font-size: 0.8em;
+}
+.text-lower {
+  padding-bottom: 1em;
+}
+
+.who-link {
+  color: rgb(59, 162, 202);
+  text-decoration: none;
 }
