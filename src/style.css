@@ -8,8 +8,8 @@
 .deathIcon,
 .recIcon,
 .confIcon {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 
 .container-icons {
@@ -29,19 +29,15 @@
   flex-direction: row;
 }
 
-.subtitle {
-  color: grey;
-}
-
 .title {
   display: flex;
   align-items: center;
   border-bottom: orange 1px solid;
   width: 100%;
   height: 9vh;
-  font-size: 1.2em;
-  color: rgb(85, 85, 85);
-  padding-left: 0.4em;
+  font-size: 1.8em;
+  color: rgb(49, 49, 49);
+  padding-left: 0.7em;
 }
 
 .display-left {
@@ -54,6 +50,7 @@
 .display-left-text {
   margin-bottom: 1em;
   padding-right: 1em;
+  padding-left: 0.7em;
   font-size: 0.8em;
   color: grey;
   font-family: "Roboto", sans-serif;
@@ -75,21 +72,22 @@
 }
 
 .numbers {
-  font-size: 1.5em;
-  color: rgb(77, 77, 77);
+  font-size: 1.4em;
+  color: rgb(90, 90, 90);
 }
 
 .credit {
   font-size: 0.7em;
-  color: grey;
-  margin-top: auto;
+  color: rgb(161, 161, 161);
+  padding: 0.3em;
   text-align: right;
 }
 
 .image-container {
   display: flex;
+  align-items: center;
   margin: 0.8em 0 0 0.3em;
-  font-size: 1em;
+  font-size: 1.3em;
   color: rgb(148, 148, 148);
   font-weight: 300;
 }
@@ -120,11 +118,12 @@
   border: 1.1px solid rgb(230, 230, 230);
 }
 
-p {
+.para-text {
   font-family: "Roboto", sans-serif;
   margin: 1em 0.5em 0 0.5em;
   color: rgb(94, 94, 94);
   font-size: 0.8em;
+  padding-left: 0.7em;
 }
 .text-lower {
   padding-bottom: 1em;
@@ -137,4 +136,8 @@ p {
 
 .flex-container {
   display: flex;
+}
+
+.icon-text-bottom {
+  font-size: 0.6em;
 }

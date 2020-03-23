@@ -53,7 +53,6 @@ class LeftDisplay extends Component {
           />
           <DisplayText />
           <DisplayIcons />
-          <Footer />
         </div>
       </div>
     );
@@ -67,15 +66,15 @@ class DisplayIcons extends Component {
         <div className="image-container-main">
           <div className="image-container">
             <img className="recIcon" src={LogoSickTwo} alt="human"></img>
-            <p> = Confirmed Cases</p>
+            <p className="icon-text-bottom"> = Confirmed Cases</p>
           </div>
           <div className="image-container">
             <img className="recIcon" src={LogoHealthy} alt="human"></img>
-            <p> = Recovered</p>
+            <p className="icon-text-bottom"> = Recovered</p>
           </div>
           <div className="image-container">
             <img className="recIcon" src={LogoSick} alt="human"></img>
-            <p> = Deaths</p>
+            <p className="icon-text-bottom"> = Deaths</p>
           </div>
         </div>
       </p>
@@ -88,7 +87,7 @@ class DisplayText extends Component {
     return (
       <>
         <div className="grey-line"></div>
-        <p>
+        <p className="para-text">
           This Website helps to visualise the impact of COVID-19 and it's
           spread.
         </p>
@@ -96,12 +95,12 @@ class DisplayText extends Component {
           <img className="image-amount" src={LogoGrey} alt="human"></img>
           <p className="image-text"> = 1000 People</p>
         </div>
-        <p>
+        <p className="para-text">
           The vast numbers infected can make it hard to visualise the
           relationship between those infected, those who recover and those who
           die from the virus. This website is an attempt to solve that problem.
         </p>
-        <p className="text-lower">
+        <p className="text-lower para-text">
           The data displayed is from the{" "}
           <a
             className="who-link"
@@ -113,6 +112,7 @@ class DisplayText extends Component {
           </a>{" "}
           and is updated every minute
         </p>
+        <Footer />
         <div className="grey-line"></div>
       </>
     );
