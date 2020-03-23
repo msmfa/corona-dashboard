@@ -76,6 +76,10 @@ class DisplayIcons extends Component {
           <img className="recIcon" src={LogoSick} alt="human"></img>
           <p className="icon-text-bottom"> Deaths</p>
         </div>
+        <div className="image-key">
+          <img className="recIcon" src={LogoGrey} alt="human"></img>
+          <p className="icon-text-bottom"> 1000 People</p>
+        </div>
       </div>
     );
   }
@@ -90,14 +94,14 @@ class DisplayText extends Component {
           This Website helps to visualise the impact of COVID-19 and it's
           spread.
         </p>
-        <div className="image-container">
-          <img className="image-amount" src={LogoGrey} alt="human"></img>
-          <p className="image-text"> = 1000 People</p>
-        </div>
+
         <p className="para-text">
           The vast numbers infected can make it hard to visualise the
           relationship between those infected, those who recover and those who
-          die from the virus. This website is an attempt to solve that problem.
+          die from the virus.{" "}
+          <span className="each-text">
+            Each person on the right represents 1000 people.
+          </span>
         </p>
         <p className="text-lower para-text">
           The data displayed is from the{" "}

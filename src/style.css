@@ -32,27 +32,28 @@
 .title {
   display: flex;
   align-items: center;
-  border-bottom: orange 1px solid;
+  border-bottom: rgb(216, 218, 228) 1px solid;
   width: 100%;
   height: 9vh;
   font-size: 1.8em;
-  color: rgb(49, 49, 49);
-  padding-left: 0.7em;
+  color: rgb(42, 42, 87);
+  margin-top: 0.5em;
+  padding-left: 0.4em;
 }
 
 .display-left {
   display: flex;
   flex-direction: column;
   width: 35vw;
-  border-right: 1px solid rgb(186, 187, 186);
+  border-right: 2px solid rgb(73, 188, 255);
   height: 100vh;
+  background-color: rgb(255, 255, 255);
 }
 .display-left-text {
   margin-bottom: 1em;
   padding-right: 1em;
   padding-left: 0.7em;
   font-size: 0.8em;
-  color: grey;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.05em;
   font-weight: 200;
@@ -63,7 +64,7 @@
 }
 
 .subtitle {
-  color: rgb(119, 118, 117);
+  color: rgb(190, 111, 31);
   text-transform: capitalize;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -71,11 +72,10 @@
   margin-bottom: 1.4em;
 }
 
-
 .credit {
   font-size: 0.7em;
   color: rgb(161, 161, 161);
-  padding: 0.3em;
+  padding: 1em;
   text-align: right;
 }
 
@@ -89,24 +89,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 0.3em;
+  border-bottom: rgb(216, 218, 228) 1px solid;
 }
 
 .numbers {
-    font-size: 1.4em;
-    color: rgb(67, 68, 87);
-  }
-
-.grey-line {
-  width: 100%;
-  border: 1.1px solid rgb(230, 230, 230);
+  font-size: 1.4em;
+  color: rgb(105, 105, 110);
 }
 
 .para-text {
   font-family: "Roboto", sans-serif;
   margin: 1em 0.5em 0 0.5em;
-  color: rgb(94, 94, 94);
+  color: rgb(110, 110, 110);
   font-size: 0.8em;
-  padding-left: 0.7em;
+  padding: 0 1em;
 }
 .text-lower {
   padding-bottom: 1em;
@@ -129,7 +125,7 @@
   display: flex;
   position: absolute;
   bottom: 0.7em;
-  margin-left: 45vw;
+  margin-left: 0;
   font-size: 0.4;
 }
 .image-key {
@@ -163,10 +159,14 @@
 .date-container {
   display: flex;
   font-size: 0.6em;
-  margin: 0.4em 0.4em 0 0;
+  margin: 0.4em 1em 0 0;
   text-transform: uppercase;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   color: rgb(189, 189, 189);
   justify-content: flex-end;
+}
+
+.each-text {
+  font-weight: 600;
 }
