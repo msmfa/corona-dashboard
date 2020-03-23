@@ -92,3 +92,10 @@ body {
   margin-top: auto;
   text-align: right;
 }
+
+.image-container {
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+  font-size: 1.5em;
+}

@@ -3,7 +3,7 @@ import Axios from "axios";
 import LogoSick from "./IMG/human-sick.PNG";
 import LogoSickTwo from "./IMG/human-icon-sick2.png";
 import LogoHealthy from "./IMG/human-icon-healthy.png";
-
+import LogoGrey from "./IMG/human-icon-grey.png";
 class App extends Component {
   state = {
     confirmed: 0
@@ -33,10 +33,10 @@ class App extends Component {
           </p>
           <p className="display-left-text">
             This Website helps to visualise COVID-19s spread and it's impact on
-            humanity.{" "}
-            <div className="bold">
-              Each person displayed on the right represents 1,000 people. It is
-              updated automatically.
+            humanity.
+            <div className="image-container">
+              <img className="recIcon" src={LogoGrey} alt="human"></img>
+              <p> = 1000 People</p>
             </div>
           </p>
           <h3 className="subtitle">confirmed: </h3>
