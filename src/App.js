@@ -4,6 +4,7 @@ import LogoSick from "./IMG/human-sick.PNG";
 import LogoSickTwo from "./IMG/human-icon-sick2.png";
 import LogoHealthy from "./IMG/human-icon-healthy.png";
 import LogoGrey from "./IMG/defaulthuman.png";
+import DisplayDate from "./components/DisplayDate";
 
 class App extends Component {
   state = {
@@ -46,6 +47,7 @@ class LeftDisplay extends Component {
       <div className="main-container">
         <div className="display-left">
           <Header />
+          <DisplayDate />
           <DisplayNumbers
             deaths={this.props.deaths}
             recovered={this.props.recovered}
@@ -170,7 +172,6 @@ class DisplayDeaths extends Component {
   };
 
   createTableDeaths = () => {
-    console.log(this.createDeathNumber());
     let div = [];
 
     for (let i = 0; i < this.createDeathNumber(); i++) {

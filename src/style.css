@@ -63,7 +63,7 @@
 }
 
 .subtitle {
-  color: rgb(92, 92, 92);
+  color: rgb(119, 118, 117);
   text-transform: capitalize;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -71,34 +71,12 @@
   margin-bottom: 1.4em;
 }
 
-.numbers {
-  font-size: 1.4em;
-  color: rgb(90, 90, 90);
-}
 
 .credit {
   font-size: 0.7em;
   color: rgb(161, 161, 161);
   padding: 0.3em;
   text-align: right;
-}
-
-.image-container {
-  display: flex;
-  align-items: center;
-  margin: 0.8em 0 0 0.3em;
-  font-size: 1.3em;
-  color: rgb(148, 148, 148);
-  font-weight: 300;
-}
-
-.image-amount {
-  width: 40px;
-  font-family: "Roboto", sans-serif;
-}
-.image-text {
-  font-family: "Roboto", sans-serif;
-  color: rgb(56, 56, 56);
 }
 
 .link {
@@ -108,10 +86,15 @@
 
 .numbers-container {
   text-align: center;
-  margin-top: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 0.3em;
 }
+
+.numbers {
+    font-size: 1.4em;
+    color: rgb(67, 68, 87);
+  }
 
 .grey-line {
   width: 100%;
@@ -154,4 +137,36 @@
   text-align: center;
   font-family: "Roboto", sans-serif;
   color: grey;
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  margin: 0.8em 0 0 0.3em;
+  font-size: 1.3em;
+  color: rgb(148, 148, 148);
+  font-weight: 300;
+}
+
+.image-amount {
+  width: 22px;
+  font-family: "Roboto", sans-serif;
+}
+.image-text {
+  font-family: "Roboto", sans-serif;
+  color: rgb(56, 56, 56);
+}
+
+.month {
+  padding-left: 0.2em;
+}
+
+.date-container {
+  display: flex;
+  font-size: 0.6em;
+  margin: 0.4em 0.4em 0 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: rgb(189, 189, 189);
+  justify-content: flex-end;
 }
