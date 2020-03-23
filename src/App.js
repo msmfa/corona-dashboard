@@ -26,33 +26,35 @@ class App extends Component {
       <div className="main-container">
         <div className="display-left">
           <h1 className="title">Visualising COVID-19</h1>
-          <h2>
-            <p className="display-left-text">
-              The first case of the new Coronavirus COVID-19 was recorded on 31
-              December in Wuhan, China (WHO). Since then {this.state.confirmed}{" "}
-              confirmed cases have been recorded worldwide.{" "}
-            </p>
-            <p className="display-left-text">
-              This Website helps to visualise COVID-19s spread and it's impact
-              on humanity.{" "}
-              <div className="bold">
-                Each person displayed on the right represents 1,000 people. It
-                is updated automatically.
-              </div>
-            </p>
-
-            <h3 className="subtitle">confirmed: </h3>
-            <h3 className="numbers">{this.state.confirmed}</h3>
-          </h2>
-          <h2>
-            <h3 className="subtitle">recovered: </h3>
-            <h3 className="numbers">{this.state.recovered}</h3>
-          </h2>
-          <h2>
-            <h3 className="subtitle">deaths:</h3>{" "}
-            <h3 className="numbers">{this.state.deaths}</h3>
-          </h2>
-          <h4 className="credit">Data API provided by Mathdroid.</h4>
+          <p className="display-left-text">
+            The first case of the new Coronavirus COVID-19 was recorded on 31
+            December in Wuhan, China (WHO). Since then {this.state.confirmed}{" "}
+            confirmed cases have been recorded worldwide.{" "}
+          </p>
+          <p className="display-left-text">
+            This Website helps to visualise COVID-19s spread and it's impact on
+            humanity.{" "}
+            <div className="bold">
+              Each person displayed on the right represents 1,000 people. It is
+              updated automatically.
+            </div>
+          </p>
+          <h3 className="subtitle">confirmed: </h3>
+          <h3 className="numbers">{this.state.confirmed}</h3>
+          <h3 className="subtitle">recovered: </h3>
+          <h3 className="numbers">{this.state.recovered}</h3>
+          <h3 className="subtitle">deaths:</h3>{" "}
+          <h3 className="numbers">{this.state.deaths}</h3>
+          <div className="credit">
+            Data API provided by{" "}
+            <a
+              href="https://github.com/mathdroid"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Mathdroid.
+            </a>
+          </div>
         </div>
         <DisplayDeaths
           deaths={this.state.deaths}
