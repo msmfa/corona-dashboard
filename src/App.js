@@ -66,25 +66,27 @@ class App extends Component {
 
 class DisplayDeaths extends Component {
   createDeathNumber = () => {
-    const numDeaths = this.props.deaths / 1000;
-    return Number(Math.sqrt(numDeaths));
+    const numDeaths = Math.floor(this.props.deaths / 1000);
+    return numDeaths;
   };
+
   createRecoverNumber = () => {
-    const numRec = this.props.recovered / 1000;
-    return Number(Math.sqrt(numRec));
+    const numRec = Math.floor(this.props.recovered / 1000);
+    return numRec;
   };
   createConfirmedNumber = () => {
-    const numRec = this.props.confirmed / 1000;
-    return Number(Math.sqrt(numRec));
+    const numRec = Math.floor(this.props.confirmed / 1000);
+    return numRec;
   };
 
   createTableDeaths = () => {
+    console.log(this.createDeathNumber());
     let div = [];
 
     for (let i = 0; i < this.createDeathNumber(); i++) {
       let children = [];
 
-      for (let j = 0; j < this.createDeathNumber(); j++) {
+      for (let j = 0; j < 1; j++) {
         children.push(<img className="deathIcon" src={LogoSick} alt="human" />);
       }
 
@@ -98,7 +100,7 @@ class DisplayDeaths extends Component {
     for (let i = 0; i < this.createRecoverNumber(); i++) {
       let children = [];
 
-      for (let j = 0; j < this.createRecoverNumber(); j++) {
+      for (let j = 0; j < 1; j++) {
         children.push(
           <img className="recIcon" src={LogoSickTwo} alt="human" />
         );
@@ -114,7 +116,7 @@ class DisplayDeaths extends Component {
     for (let i = 0; i < this.createConfirmedNumber(); i++) {
       let children = [];
 
-      for (let j = 0; j < this.createConfirmedNumber(); j++) {
+      for (let j = 0; j < 1; j++) {
         children.push(
           <img className="recIcon" src={LogoHealthy} alt="human" />
         );
@@ -128,10 +130,13 @@ class DisplayDeaths extends Component {
   render() {
     return (
       <div className="container-icons">
-        <div>{this.createTableDeaths()}</div>
-        <div>{this.createTableRecovered()}</div>
-        <div>{this.createTableConfirmed()}</div>
-        <div></div>
+        <div className="container-deaths">
+          {[
+            ...this.createTableDeaths(),
+            ...this.createTableRecovered(),
+            ...this.createTableConfirmed()
+          ]}
+        </div>
       </div>
     );
   }

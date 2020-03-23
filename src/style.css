@@ -14,16 +14,22 @@ body {
 .deathIcon,
 .recIcon,
 .confIcon {
-  width: 1em;
-  height: 1em;
+  width: 15px;
+  height: 15px;
 }
 
 .container-icons {
-  padding: 1em;
+  width: 50vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+.container-deaths,
+.container-recovered,
+.container-sick {
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
-  height: 50vh;
 }
 
 .main-container {
@@ -84,7 +90,6 @@ body {
   width: 15px;
   height: 15px;
   border-radius: 100%;
-
   border: 1.5px solid rgb(255, 136, 0);
   background-color: rgb(255, 168, 68);
   display: flex;
