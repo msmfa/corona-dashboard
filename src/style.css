@@ -5,11 +5,6 @@
   font-size: 1em;
 }
 
-body {
-  display: flex;
-  flex-direction: row;
-}
-
 .deathIcon,
 .recIcon,
 .confIcon {
@@ -18,9 +13,8 @@ body {
 }
 
 .container-icons {
-  margin: 0 0;
   width: 100%;
-  height: 80vh;
+  height: 100%;
   padding: 0.5em;
 }
 .container-deaths,
@@ -32,7 +26,7 @@ body {
 
 .main-container {
   display: flex;
-  height: 90vh;
+  flex-direction: row;
 }
 
 .subtitle {
@@ -53,7 +47,7 @@ body {
 .display-left {
   display: flex;
   flex-direction: column;
-  width: 45vw;
+  width: 35vw;
   border-right: 1px solid rgb(186, 187, 186);
   height: 100vh;
 }
@@ -139,4 +133,8 @@ p {
 .who-link {
   color: rgb(59, 162, 202);
   text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
 }
