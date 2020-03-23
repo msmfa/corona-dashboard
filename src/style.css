@@ -141,3 +141,17 @@
 .icon-text-bottom {
   font-size: 0.6em;
 }
+
+.image-key-container {
+  display: flex;
+  position: absolute;
+  bottom: 0.7em;
+  margin-left: 45vw;
+  font-size: 0.4;
+}
+.image-key {
+  padding: 0.5em;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: grey;
+}

@@ -52,7 +52,6 @@ class LeftDisplay extends Component {
             confirmed={this.props.confirmed}
           />
           <DisplayText />
-          <DisplayIcons />
         </div>
       </div>
     );
@@ -62,22 +61,20 @@ class LeftDisplay extends Component {
 class DisplayIcons extends Component {
   render() {
     return (
-      <p className="display-left-text">
-        <div className="image-container-main">
-          <div className="image-container">
-            <img className="recIcon" src={LogoSickTwo} alt="human"></img>
-            <p className="icon-text-bottom"> = Confirmed Cases</p>
-          </div>
-          <div className="image-container">
-            <img className="recIcon" src={LogoHealthy} alt="human"></img>
-            <p className="icon-text-bottom"> = Recovered</p>
-          </div>
-          <div className="image-container">
-            <img className="recIcon" src={LogoSick} alt="human"></img>
-            <p className="icon-text-bottom"> = Deaths</p>
-          </div>
+      <div className="image-key-container">
+        <div className="image-key">
+          <img className="recIcon" src={LogoSickTwo} alt="human"></img>
+          <p className="icon-text-bottom"> Confirmed</p>
         </div>
-      </p>
+        <div className="image-key">
+          <img className="recIcon" src={LogoHealthy} alt="human"></img>
+          <p className="icon-text-bottom"> Recovered</p>
+        </div>
+        <div className="image-key">
+          <img className="recIcon" src={LogoSick} alt="human"></img>
+          <p className="icon-text-bottom"> Deaths</p>
+        </div>
+      </div>
     );
   }
 }
@@ -230,6 +227,7 @@ class DisplayDeaths extends Component {
             ...this.createTableConfirmed()
           ]}
         </div>
+        <DisplayIcons />
       </div>
     );
   }
