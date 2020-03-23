@@ -54,6 +54,7 @@ class LeftDisplay extends Component {
             confirmed={this.props.confirmed}
           />
           <DisplayText />
+          <DisplayIcons />
         </div>
       </div>
     );
@@ -99,9 +100,7 @@ class DisplayText extends Component {
           The vast numbers infected can make it hard to visualise the
           relationship between those infected, those who recover and those who
           die from the virus.{" "}
-          <span className="each-text">
-            Each person on the right represents 1000 people.
-          </span>
+          <span className="each-text">Each person represents 1000 people.</span>
         </p>
         <p className="text-lower para-text">
           The data displayed is from the{" "}
@@ -232,7 +231,6 @@ class DisplayDeaths extends Component {
             ...this.createTableConfirmed()
           ]}
         </div>
-        <DisplayIcons />
       </div>
     );
   }
