@@ -70,7 +70,7 @@
 }
 
 .numbers {
-  font-size: 1em;
+  font-size: 1.4em;
   color: rgb(62, 62, 66);
 }
 .subtitle {
@@ -89,12 +89,13 @@
   font-family: "Roboto", sans-serif;
   margin: 1em 0.5em 0 0.5em;
   color: rgb(78, 78, 78);
-  font-size: 0.8em;
+  font-size: 1.1em;
   padding: 0 1em;
 }
 
 .credit {
   margin: 1em;
+  margin-top: auto;
   font-size: 0.7em;
   color: rgb(185, 185, 185);
 }
@@ -134,7 +135,7 @@
     padding: 0.5em 0 0 0.5em;
   }
   .fatality-rate-text {
-    font-size: 0.7em;
+    font-size: 1em;
     width: 30vw;
   }
   .main-container {
@@ -147,8 +148,8 @@
   .deathIcon,
   .recIcon,
   .confIcon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
   }
   .title {
     width: 100%;
