@@ -6,19 +6,34 @@ class DisplayFatalityRate extends Component {
     const confirmedCases = +this.props.confirmed;
     const percentage = deaths * (100 / confirmedCases);
 
-    return ` ${Math.round(percentage * 100) / 100}%`;
+    return `${Math.round(percentage * 100) / 100}%`;
+  };
+
+  RecoveryRate = () => {
+    const recovered = +this.props.recovered;
+    const confirmedCases = +this.props.confirmed;
+    const percentage = recovered * (100 / confirmedCases);
+    return `${Math.round(percentage * 100) / 100}%`;
+  };
+
+  GlobalInfectionRate = () => {
+    const confirmedCases = +this.props.confirmed;
+    const percentage = confirmedCases * (100 / 8000000000);
+    const output = String(percentage)
+      .split("")
+      .slice(0, 6);
+
+    return output;
   };
   render() {
     return (
       <>
+        <p className="fatality-rate-text">Fatality rate = {this.fatalRate()}</p>
         <p className="fatality-rate-text">
-          Current Fatality rate ={this.fatalRate()}
+          Recovery Rate = {this.RecoveryRate()}
         </p>
         <p className="fatality-rate-text">
-          Current Fatality rate ={this.fatalRate()}
-        </p>
-        <p className="fatality-rate-text">
-          Current Fatality rate ={this.fatalRate()}
+          Global Infection Rate = {this.GlobalInfectionRate()}
         </p>
       </>
     );

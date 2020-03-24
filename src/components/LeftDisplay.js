@@ -4,7 +4,7 @@ import DisplayDate from "./DisplayDate";
 import DisplayNumbers from "./DisplayNumbers";
 import DisplayText from "./DisplayText";
 import DisplayFatalityRate from "./DisplayFatalityRate";
-import DisplayIcons from "./DisplayIcons";
+import Footer from "./Footer";
 
 class LeftDisplay extends Component {
   render() {
@@ -22,7 +22,9 @@ class LeftDisplay extends Component {
           <DisplayFatalityRate
             deaths={this.props.deaths}
             confirmed={this.props.confirmed}
+            recovered={this.props.recovered}
           />
+          <Footer />
         </div>
       </div>
     );

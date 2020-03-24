@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DisplayFatalityRate from "./DisplayFatalityRate";
+
 class DisplayText extends Component {
   render() {
     return (
@@ -30,8 +30,6 @@ class DisplayText extends Component {
           </a>{" "}
           and is automatically updated.
         </p>
-
-        <Footer />
       </>
     );
   }

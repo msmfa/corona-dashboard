@@ -5,13 +5,15 @@
   font-size: 1em;
 }
 .fatality-rate-text {
+  font-size: 0.7em;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60vw;
-  height: 9vh;
+  height: 5vh;
   border: 1px solid rgb(133, 190, 255);
-  margin: auto;
+  margin: 0.7em auto;
   background-color: rgb(210, 244, 255);
   border-radius: 4px;
   color: rgb(22, 22, 133);
@@ -89,10 +91,9 @@
 }
 
 .credit {
+  margin: 1em;
   font-size: 0.7em;
-  color: rgb(161, 161, 161);
-  padding: 1em;
-  text-align: right;
+  color: rgb(185, 185, 185);
 }
 
 .each-text {
