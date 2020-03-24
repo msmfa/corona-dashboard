@@ -27,7 +27,7 @@ class DisplayFatalityRate extends Component {
   };
   render() {
     return (
-      <>
+      <div className="fatality-container">
         <p className="fatality-rate-text">Fatality rate = {this.fatalRate()}</p>
         <p className="fatality-rate-text">
           Recovery Rate = {this.RecoveryRate()}
@@ -35,7 +35,7 @@ class DisplayFatalityRate extends Component {
         <p className="fatality-rate-text">
           Global Infection Rate = {this.GlobalInfectionRate()}%
         </p>
-      </>
+      </div>
     );
   }
 }
