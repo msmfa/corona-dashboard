@@ -2,7 +2,7 @@
 
 ## Deployment
 
-\*...link to site/what to download/what to install
+https://msmfa.github.io/corona-dashboard/
 
 ## Screenshot
 
