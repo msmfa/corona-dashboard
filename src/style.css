@@ -12,7 +12,6 @@
   height: 9vh;
   border: 1px solid rgb(133, 190, 255);
   margin: auto;
-  margin-top: 0.3em;
   background-color: rgb(210, 244, 255);
   border-radius: 4px;
   color: rgb(22, 22, 133);
@@ -100,11 +99,6 @@
   font-weight: 600;
 }
 
-.image-key-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1em;
-}
 .icon-text-bottom {
   font-size: 0.7em;
   color: grey;
@@ -114,7 +108,6 @@
 @media only screen and (min-width: 800px) {
   .fatality-rate-text {
     width: 30vw;
-    margin-top: 2em;
   }
   .main-container {
     display: flex;
@@ -173,12 +166,23 @@
   .icon-text-bottom {
     font-size: 0.6em;
   }
-
+  .ik-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0.8em;
+  }
   .image-key-container {
-    margin: 1em 2.7em;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
     bottom: 0.7em;
     font-size: 0.4;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 240px;
+    height: 50px;
   }
   .image-key {
     padding: 0 0.9em;

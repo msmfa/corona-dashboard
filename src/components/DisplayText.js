@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import DisplayFatalityRate from "./DisplayFatalityRate";
 class DisplayText extends Component {
   render() {
     return (

@@ -23,7 +23,6 @@ class LeftDisplay extends Component {
             deaths={this.props.deaths}
             confirmed={this.props.confirmed}
           />
-          <DisplayIcons />
         </div>
       </div>
     );

@@ -10,11 +10,21 @@ class DisplayFatalityRate extends Component {
   };
   render() {
     return (
-      <p className="fatality-rate-text">
-        Current Fatality rate ={this.fatalRate()}
-      </p>
+      <>
+        <p className="fatality-rate-text">
+          Current Fatality rate ={this.fatalRate()}
+        </p>
+        <p className="fatality-rate-text">
+          Current Fatality rate ={this.fatalRate()}
+        </p>
+        <p className="fatality-rate-text">
+          Current Fatality rate ={this.fatalRate()}
+        </p>
+      </>
     );
   }
 }
 
 export default DisplayFatalityRate;
+//Add global infection rate in
+// Add recovery rate in green
