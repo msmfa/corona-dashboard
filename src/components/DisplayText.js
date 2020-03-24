@@ -10,14 +10,14 @@ class DisplayText extends Component {
           spread.
         </p>
 
-        <p className="para-text">
+        <div className="para-text">
           The vast numbers infected can make it hard to visualise the
           relationship between those infected, those who recover and those who
           die from the virus.{" "}
           <p className="each-text">
             Each icon displayed represents 1,000 people.
           </p>
-        </p>
+        </div>
         <p className="text-lower para-text">
           The data displayed is from{" "}
           <a
