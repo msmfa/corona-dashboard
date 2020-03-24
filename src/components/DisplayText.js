@@ -14,17 +14,19 @@ class DisplayText extends Component {
           The vast numbers infected can make it hard to visualise the
           relationship between those infected, those who recover and those who
           die from the virus.{" "}
-          <span className="each-text">Each person represents 1000 people.</span>
+          <div className="each-text">
+            Each icon displayed represents 1,000 people.
+          </div>
         </p>
         <p className="text-lower para-text">
-          The data displayed is from the{" "}
+          The data displayed is from{" "}
           <a
-            className="who-link"
-            href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
+            className="johns-hopkins-link"
+            href="https://coronavirus.jhu.edu/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            WHO
+            John Hopskins University
           </a>{" "}
           and is automatically updated.
         </p>
