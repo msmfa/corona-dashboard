@@ -3,9 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.johns-hopkins-link {
+  color: rgb(59, 162, 202);
+  text-decoration: none;
+}
 .fatality-rate-text {
   font-size: 0.7em;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +46,7 @@
   color: rgb(40, 40, 46);
   height: 8vh;
   padding-left: 1em;
+  font-size: 1em;
 }
 .month {
   padding-left: 0.2em;
@@ -66,7 +71,7 @@
 }
 
 .numbers {
-  font-size: 1.2em;
+  font-size: 1em;
   color: rgb(62, 62, 66);
 }
 .subtitle {
@@ -74,7 +79,7 @@
   text-transform: capitalize;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 0.7em;
+  font-size: 0.6em;
   margin-bottom: 1.4em;
 }
 .display-left {
