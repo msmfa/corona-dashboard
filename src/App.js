@@ -3,6 +3,8 @@ import Axios from "axios";
 import DisplayDeaths from "./components/DisplayDeaths";
 import LeftDisplay from "./components/LeftDisplay";
 import DisplayIcons from "./components/DisplayIcons";
+import { v4 as uuidv4 } from "uuid";
+
 class App extends Component {
   state = {
     confirmed: 0
@@ -28,11 +30,14 @@ class App extends Component {
           recovered={this.state.recovered}
           deaths={this.state.deaths}
         />
+
         <DisplayDeaths
+          key={this.state.key}
           deaths={this.state.deaths}
           recovered={this.state.recovered}
           confirmed={this.state.confirmed}
         />
+
         <DisplayIcons />
       </div>
     );

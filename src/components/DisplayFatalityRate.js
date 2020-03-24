@@ -33,7 +33,7 @@ class DisplayFatalityRate extends Component {
           Recovery Rate = {this.RecoveryRate()}
         </p>
         <p className="fatality-rate-text">
-          Global Infection Rate = {this.GlobalInfectionRate()}
+          Global Infection Rate = {this.GlobalInfectionRate()}%
         </p>
       </>
     );

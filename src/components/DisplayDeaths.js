@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { v4 as uuidv4 } from "uuid";
 import IconGreen from "./IMG/icon-green.png";
 import IconRed from "./IMG/icon-red.png";
 import IconYellow from "./IMG/icon-yellow.png";
@@ -25,10 +26,16 @@ class DisplayDeaths extends Component {
       let children = [];
 
       for (let j = 0; j < 1; j++) {
-        children.push(<img className="deathIcon" src={IconRed} alt="human" />);
+        children.push(
+          <img key={uuidv4()} className="deathIcon" src={IconRed} alt="human" />
+        );
       }
 
-      div.push(<div className="box-deaths">{children}</div>);
+      div.push(
+        <div key={uuidv4()} className="box-deaths">
+          {children}
+        </div>
+      );
     }
     return div;
   };
@@ -39,10 +46,12 @@ class DisplayDeaths extends Component {
       let children = [];
 
       for (let j = 0; j < 1; j++) {
-        children.push(<img className="recIcon" src={IconGreen} alt="human" />);
+        children.push(
+          <img key={uuidv4()} className="recIcon" src={IconGreen} alt="human" />
+        );
       }
 
-      div.push(<div className="box-second">{children}</div>);
+      div.push(<div key={uuidv4()}>{children}</div>);
     }
     return div;
   };
@@ -53,10 +62,21 @@ class DisplayDeaths extends Component {
       let children = [];
 
       for (let j = 0; j < 1; j++) {
-        children.push(<img className="recIcon" src={IconYellow} alt="human" />);
+        children.push(
+          <img
+            key={uuidv4()}
+            className="recIcon"
+            src={IconYellow}
+            alt="human"
+          />
+        );
       }
 
-      div.push(<div className="box-confirmed">{children}</div>);
+      div.push(
+        <div key={uuidv4()} className="box-confirmed">
+          {children}
+        </div>
+      );
     }
     return div;
   };
@@ -67,8 +87,8 @@ class DisplayDeaths extends Component {
         <div className="container-deaths">
           {[
             ...this.createTableDeaths(),
-            ...this.createTableRecovered(),
-            ...this.createTableConfirmed()
+            ...this.createTableConfirmed(),
+            ...this.createTableRecovered()
           ]}
         </div>
       </div>
