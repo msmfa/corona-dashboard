@@ -4,7 +4,20 @@
   box-sizing: border-box;
   font-size: 1em;
 }
-
+.fatality-rate-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 9vh;
+  border: 1px solid rgb(133, 190, 255);
+  margin: auto;
+  margin-top: 0.3em;
+  background-color: rgb(210, 244, 255);
+  border-radius: 4px;
+  color: rgb(22, 22, 133);
+  font-family: "Roboto", sans-serif;
+}
 .deathIcon,
 .recIcon,
 .confIcon {
@@ -99,6 +112,10 @@
 }
 
 @media only screen and (min-width: 800px) {
+  .fatality-rate-text {
+    width: 30vw;
+    margin-top: 2em;
+  }
   .main-container {
     display: flex;
     flex-direction: row;
@@ -158,11 +175,10 @@
   }
 
   .image-key-container {
-    display: flex;
+    margin: 1em 2.7em;
     position: absolute;
     bottom: 0.7em;
     font-size: 0.4;
-    margin-left: 7vw;
   }
   .image-key {
     padding: 0 0.9em;

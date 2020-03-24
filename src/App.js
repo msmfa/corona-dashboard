@@ -41,6 +41,23 @@ class App extends Component {
   }
 }
 
+class DisplayFatalityRate extends Component {
+  fatalRate = () => {
+    const deaths = +this.props.deaths;
+    const confirmedCases = +this.props.confirmed;
+    const percentage = deaths * (100 / confirmedCases);
+
+    return ` ${Math.round(percentage * 100) / 100}%`;
+  };
+  render() {
+    return (
+      <p className="fatality-rate-text">
+        Current Fatality rate ={this.fatalRate()}
+      </p>
+    );
+  }
+}
+
 class LeftDisplay extends Component {
   render() {
     return (
@@ -54,6 +71,10 @@ class LeftDisplay extends Component {
             confirmed={this.props.confirmed}
           />
           <DisplayText />
+          <DisplayFatalityRate
+            deaths={this.props.deaths}
+            confirmed={this.props.confirmed}
+          />
           <DisplayIcons />
         </div>
       </div>
@@ -114,8 +135,8 @@ class DisplayText extends Component {
           </a>{" "}
           and is automatically updated.
         </p>
+
         <Footer />
-        <div className="grey-line"></div>
       </>
     );
   }
