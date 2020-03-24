@@ -6,7 +6,7 @@
 
 ## Screenshot
 
-![](IMG/corono-app-screenshot.png)
+![](screenshot/corono-app-screenshot.png)
 
 ## Build Tools & Languages
 
