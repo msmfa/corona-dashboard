@@ -17,7 +17,7 @@ function LeftDisplay(props) {
           recovered={props.recovered}
           confirmed={props.confirmed}
         />
-        <DisplayText />
+        <DisplayText deaths={props.deaths} />
         <DisplayFatalityRate
           deaths={props.deaths}
           confirmed={props.confirmed}

@@ -7,7 +7,7 @@ import DisplayIcons from "./components/DisplayIcons";
 //app passes
 
 function App() {
-  const [state, setState] = useState({ confirmed: 0 });
+  const [state, setState] = useState({});
 
   useEffect(() => {
     async function getData() {

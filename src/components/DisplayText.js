@@ -1,6 +1,8 @@
 import React from "react";
 
 function DisplayText() {
+  const NUM_ICON_REPRESENTS = 10000;
+
   return (
     <>
       <div className="grey-line"></div>
@@ -13,7 +15,7 @@ function DisplayText() {
         between those infected, those who recover and those who die from the
         virus.{" "}
         <p className="each-text">
-          Each icon displayed represents 1,000 people.
+          Each icon displayed represents {NUM_ICON_REPRESENTS} people.
         </p>
       </div>
       <p className="text-lower para-text">
