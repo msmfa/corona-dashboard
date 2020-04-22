@@ -4,7 +4,7 @@ import IconGreen from "./IMG/icon-green.png";
 import IconRed from "./IMG/icon-red.png";
 import IconYellow from "./IMG/icon-yellow.png";
 
-const ICON_REPRESENTS = 1000;
+const ICON_REPRESENTS = 10000;
 
 function DisplayDeaths(props) {
   const createDeathNumber = () => {
