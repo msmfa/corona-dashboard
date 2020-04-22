@@ -1,16 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
-class DisplayDate extends Component {
-  render() {
-    return (
-      <>
-        <div className="date-container">
-          <GetDigit />
-          <DisplayMonth />
-        </div>
-      </>
-    );
-  }
+function DisplayDate() {
+  return (
+    <>
+      <div className="date-container">
+        <GetDigit />
+        <DisplayMonth />
+      </div>
+    </>
+  );
 }
 
 function DisplayMonth() {
@@ -28,7 +26,7 @@ function DisplayMonth() {
     "Sep",
     "Oct",
     "Nov",
-    "Dec"
+    "Dec",
   ];
   return <div className="month">{months[monthNumber]}</div>;
 }
