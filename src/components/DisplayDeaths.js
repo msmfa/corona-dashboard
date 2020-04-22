@@ -1,28 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import IconGreen from "./IMG/icon-green.png";
 import IconRed from "./IMG/icon-red.png";
 import IconYellow from "./IMG/icon-yellow.png";
 
-class DisplayDeaths extends Component {
-  createDeathNumber = () => {
-    const numDeaths = Math.floor(this.props.deaths / 1000);
+const ICON_REPRESENTS = 1000;
+
+function DisplayDeaths(props) {
+  const createDeathNumber = () => {
+    const numDeaths = Math.floor(props.deaths / ICON_REPRESENTS);
     return numDeaths;
   };
 
-  createRecoverNumber = () => {
-    const numRec = Math.floor(this.props.recovered / 1000);
+  const createRecoverNumber = () => {
+    const numRec = Math.floor(props.recovered / ICON_REPRESENTS);
     return numRec;
   };
-  createConfirmedNumber = () => {
-    const numRec = Math.floor(this.props.confirmed / 1000);
+  const createConfirmedNumber = () => {
+    const numRec = Math.floor(props.confirmed / ICON_REPRESENTS);
     return numRec;
   };
 
-  createTableDeaths = () => {
+  const createIconDeaths = () => {
     let div = [];
 
-    for (let i = 0; i < this.createDeathNumber(); i++) {
+    for (let i = 0; i < createDeathNumber(); i++) {
       let children = [];
 
       for (let j = 0; j < 1; j++) {
@@ -39,10 +41,10 @@ class DisplayDeaths extends Component {
     }
     return div;
   };
-  createTableRecovered = () => {
+  const createIconRecovered = () => {
     let div = [];
 
-    for (let i = 0; i < this.createRecoverNumber(); i++) {
+    for (let i = 0; i < createRecoverNumber(); i++) {
       let children = [];
 
       for (let j = 0; j < 1; j++) {
@@ -55,10 +57,10 @@ class DisplayDeaths extends Component {
     }
     return div;
   };
-  createTableConfirmed = () => {
+  const createIconConfirmed = () => {
     let div = [];
 
-    for (let i = 0; i < this.createConfirmedNumber(); i++) {
+    for (let i = 0; i < createConfirmedNumber(); i++) {
       let children = [];
 
       for (let j = 0; j < 1; j++) {
@@ -81,18 +83,16 @@ class DisplayDeaths extends Component {
     return div;
   };
 
-  render() {
-    return (
-      <div className="container-icons">
-        <div className="container-deaths">
-          {[
-            ...this.createTableDeaths(),
-            ...this.createTableConfirmed(),
-            ...this.createTableRecovered()
-          ]}
-        </div>
+  return (
+    <div className="container-icons">
+      <div className="container-deaths">
+        {[
+          ...createIconDeaths(),
+          ...createIconConfirmed(),
+          ...createIconRecovered(),
+        ]}
       </div>
-    );
-  }
+    </div>
+  );
 }
 export default DisplayDeaths;
