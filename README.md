@@ -2,7 +2,7 @@
 
 ## Deployment
 
-https://msmfa.github.io/corona-dashboard/
+https://covis.netlify.app/
 
 ## Screenshot
 
