@@ -15,11 +15,6 @@ https://covis.netlify.app/
 - Git
 - Github
 
-## What did I learn?
-
-React
-Working with APIS
-
 ## Dependencies
 
 UUID4 for generating unique keys
